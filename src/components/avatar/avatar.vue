@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script>
+<script lang="js">
 export default {
   props: {
     id: {
@@ -168,5 +168,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 </style>
