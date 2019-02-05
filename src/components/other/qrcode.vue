@@ -26,7 +26,7 @@
 			}
 		},
 		mounted() {
-      this.insertExternalSource();
+      		this.insertExternalSource();
 		},
 		data() {
 			return {
