@@ -4,6 +4,8 @@
 		<!--<HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
 		<avatar email="test@web.de" firstname="test" lastname="test" size="50" id="av" classname="av-cl" secondname="tttt" textsize="14" color="white" bgcolor="black" overcolor="green" borderradius="50"/>
 		<qrcode width=150 height=200 format="UTF-8" correction="Q" data="google.de"></qrcode>
+		<headline :level=1>hi</headline>
+		<bold text="test"></bold>
 		<div class="page">
 			<div class="header">
 				<a href="#menu">Demo</a>
@@ -33,6 +35,7 @@
 			<img alt="Vue logo" src="../assets/logo.png">
 		</div>
 		<simpleText content="Hello"></simpleText>
+		<tooltips defaulttext="hi" tooltipstext="I am here" position="top"></tooltips>
 		<optionList :options='{ "1": "Eat", "2": "Sleep", "3": "Sport" }'></optionList>
 		<!--<scrollToTop></scrollToTop>-->
 		<scrollToElement timer="1000" element="#av"></scrollToElement>
@@ -51,6 +54,11 @@ import scrollToElement from '@/components/scrolling/scrollToElement.vue';
 import optionList from '@/components/selection/optionList.vue'; 
 import cutout from '@/components/text/cutout.vue'; 
 import simpleText from '@/components/text/simpleText.vue'; 
+import tooltips from '@/components/tooltips/tooltips.vue'; 
+import symbols from '@/components/tags/symbols/symbols.vue'; 
+import IFrame from '@/components/tags/iframe/iframe.vue'; 
+import headline from '@/components/tags/headline/headline.vue'; 
+import bold from '@/components/tags/formatter/bold.vue'; 
 
 @Component({
 	components: {
@@ -64,6 +72,11 @@ import simpleText from '@/components/text/simpleText.vue';
 		optionList,
 		cutout,
 		simpleText,
+		tooltips,
+		symbols,
+		IFrame,
+		headline,
+		bold,
 	},
 })
 export default class Home extends Vue {}
