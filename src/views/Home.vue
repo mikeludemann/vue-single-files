@@ -35,6 +35,9 @@
 			<img alt="Vue logo" src="../assets/logo.png">
 		</div>
 		<simpleText content="Hello"></simpleText>
+		<days></days>
+		<loadingSpinner id="loader" classname="load" text="hi" size="50" color="#080" bgcolor="#888" speed="1s"></loadingSpinner>
+		<sortList :lists='{ "1": "Hello", "2": "Morning", "3": "Evening" }'></sortList>
 		<tooltips defaulttext="hi" tooltipstext="I am here" position="top"></tooltips>
 		<optionList :options='{ "1": "Eat", "2": "Sleep", "3": "Sport" }'></optionList>
 		<!--<scrollToTop></scrollToTop>-->
@@ -59,6 +62,9 @@ import symbols from '@/components/tags/symbols/symbols.vue';
 import IFrame from '@/components/tags/iframe/iframe.vue'; 
 import headline from '@/components/tags/headline/headline.vue'; 
 import bold from '@/components/tags/formatter/bold.vue'; 
+import days from '@/components/date-time/days.vue'; 
+import sortList from '@/components/lists/sort-list.vue'; 
+import loadingSpinner from '@/components/loading-spinner/loading-spinner.vue';
 
 @Component({
 	components: {
@@ -77,6 +83,9 @@ import bold from '@/components/tags/formatter/bold.vue';
 		IFrame,
 		headline,
 		bold,
+		days,
+		sortList,
+		loadingSpinner,
 	},
 })
 export default class Home extends Vue {}

@@ -1,25 +1,10 @@
 <template lang="html">
-	<div class="container" :style="container">
-		<div class="middle">
-			<div class="headline">
-				<h1>
-					{{this.title}}
-				</h1>
-			</div>
-			<hr class="parting-line"/>
-			<div class="countdown">
-				<div :id="id"></div>
-			</div>
-			<div class="text-middle">
-				{{this.extratext}}
-			</div>
-		</div>
-  </div>
+	<div :id="id"></div>
 </template>
 
-<script lang="js">
+<script lang="ts">
 	export default {
-		name: 'comingSoon',
+		name: 'countdownTimer',
 		props: {
 			id: {
 				type: String,
@@ -36,27 +21,6 @@
 			expiredtext: {
 				type: String,
 				required: false
-			},
-			color: {
-				type: String,
-				required: true
-			},
-			backgroundcolor: {
-				type: String,
-				required: true
-			},
-			backgroundimage: {
-				type: String,
-				required: false
-			},
-			title: {
-				type: String,
-				required: true,
-				default: "Coming Soon"
-			},
-			extratext: {
-				type: String,
-				required: false
 			}
 		},
 		mounted() {
@@ -68,11 +32,11 @@
 			}
 		},
 		methods: {
-			insertExternalSource: function (element, date, time, expiredText) {
+			insertExternalSource: function (element: string, date: string, time: string, expiredText: string) {
 
 				'use strict';
 
-				let setCountdown;
+				var setCountdown: any;
 
 				if (time == null || time == "") {
 
@@ -109,7 +73,7 @@
 					if (minutes == 1) { minutesText = " minute " } else { minutesText = " minutes " }
 					if (seconds == 1) { secondsText = " second " } else { secondsText = " seconds " }
 
-						let elementExist = document.getElementById(element);
+					var elementExist: any = document.getElementById(element);
 
 					if (distance < 0) {
 
@@ -136,49 +100,13 @@
 			}
 		},
 		computed: {
-			container: function() {
-				return {
-					color: this.color,
-					backgroundColor: this.backgroundcolor,
-					backgroundImage: this.backgroundimage,
-				};
-			}
+
 		}
 }
 </script>
 
 <style scoped lang="scss">
-	.container {
-		width: '100%';
-		height: '100%';
-		background-position: 'center';
-		background-size: 'cover';
-		position: 'absolute';
-  }
-  .middle {
-    left: '50%';
-    top: '50%';
-    position: 'absolute';
-    transform: 'translate(-50%, -50%)';
-    text-align: 'center';
-  }
-  .headline {
-    padding-bottom: '10px';
-  }
-  .parting-line {
-    width: '100%';
-    height: '5px'; 
-    background-color: '#fff';
-    margin: 'auto';
-  }
-  .countdown {
-    margin-top: '20px';
-  }
-  .text-middle {
-    left: '50%';
-    bottom: '0';
-    padding-top: '20px';
-    position: 'relative';
-    transform: 'translateX(-50%)';
-  }
+	.countdown-timer {
+
+	}
 </style>

@@ -1,0 +1,54 @@
+<template lang="html">
+	<div id="container">
+		<a id="pinterest" data-pin-do="buttonFollow">{{ this.fullName }}</a>
+	</div>
+</template>
+
+<script lang="ts">
+	export default {
+		name: 'pinterestButtonFollow',
+		props: {
+			follow: String,
+			fullname: String
+		},
+		mounted() {
+			this.insertExternalSource();
+		},
+		data() {
+			return {
+
+			}
+		},
+		methods: {
+			insertExternalSource: function () {
+
+				var js: any = document.createElement("script"),
+					pin: any = document.getElementById("pinterest");
+
+				js.setAttribute("async", "true");
+				js.setAttribute("defer", "true");
+				js.setAttribute("src", "//assets.pinterest.com/js/pinit.js");
+				document.getElementsByTagName("head").item(0).appendChild(js);
+
+
+				if (this.follow != "" || this.follow != null) {
+
+					pin.setAttribute("href", "https://www.pinterest.com/" + this.follow);
+
+				}
+
+				document.getElementsByTagName("head").item(0).appendChild(js);
+
+			}
+		},
+		computed: {
+
+		}
+}
+</script>
+
+<style scoped lang="scss">
+	.pinterest-button-follow {
+
+	}
+</style>
