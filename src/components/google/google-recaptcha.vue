@@ -2,7 +2,7 @@
 	<div class="g-recaptcha"></div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'googleRecaptcha',
 		props: {

@@ -2,7 +2,7 @@
 	<iframe id="youtube" :width="width" :height="height" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'youtubeVideo',
 		props: {
@@ -21,7 +21,7 @@
 		methods: {
 			insertExternalSource: function () {
 
-				var video: any = document.getElementById("youtube");
+				var video = document.getElementById("youtube");
 				video.setAttribute("src", "https://www.youtube.com/embed/" + this.videoid);
 
 			}

@@ -8,7 +8,7 @@
 	</div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'whatsapp',
 		props: {
@@ -38,7 +38,7 @@
 
 				document.getElementsByTagName("head").item(0).appendChild(link);
 
-				var elem: any = document.getElementById("content");
+				var elem = document.getElementById("content");
 				elem.setAttribute("href", "https://api.whatsapp.com/send?phone=" + this.telephone + "&text=" + this.text + "&source=" + this.source + "&data=" + this.data);
 
 			}

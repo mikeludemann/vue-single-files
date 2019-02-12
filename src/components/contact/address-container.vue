@@ -2,7 +2,7 @@
   <div id="address"></div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'addressContainer',
 		props: {
@@ -76,7 +76,7 @@
 
 				}
 
-        var content: any = document.getElementById("address");
+        var content = document.getElementById("address");
         content.innerHTML = txt;
 
 			}

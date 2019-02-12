@@ -2,7 +2,7 @@
 	<iframe id="vimeo" :width="width" :height="height" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'vimeo',
 		props: {
@@ -21,7 +21,7 @@
 		methods: {
 			insertExternalSource: function () {
 
-				var video: any = document.getElementById("vimeo");
+				var video = document.getElementById("vimeo");
 				video.setAttribute("src", "https://player.vimeo.com/video/" + this.videoid);
 
 			}

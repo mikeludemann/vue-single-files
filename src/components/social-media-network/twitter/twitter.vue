@@ -2,13 +2,13 @@
 	<a id="tweets"> Tweets by {{this.twitterid}} </a>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'twitter',
 		props: {
-      twitterid: String,
-      format: String
-    },
+			twitterid: String,
+			format: String
+		},
 		mounted() {
 			this.insertExternalSource();
 		},
@@ -26,7 +26,7 @@
 				js.setAttribute("charset", "utf-8");
 				document.getElementsByTagName("head").item(0).appendChild(js);
 
-				var tweet: any = document.getElementById("tweets");
+				var tweet = document.getElementById("tweets");
 				tweet.setAttribute("href", "http://twitter.com/" + this.twitterid);
 				tweet.setAttribute("class", "twitter-" + this.format);
 

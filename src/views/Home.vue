@@ -30,18 +30,18 @@
 			<div>your content 3</div>
 		</slick>
 		-->
-		<img alt="Vue logo" src="../assets/logo.png">
 		<div>
-			<img alt="Vue logo" src="../assets/logo.png">
+			<fwIcon icon="far fa-clock fa-5x"></fwIcon>
+			<materialIcon icon="donut_small"></materialIcon>
 		</div>
-		<simpleText content="Hello"></simpleText>
-		<days></days>
-		<loadingSpinner id="loader" classname="load" text="hi" size="50" color="#080" bgcolor="#888" speed="1s"></loadingSpinner>
+		<sourceList :sources='{ "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4": "video/mp4", "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp3": "video/mp3" }'></sourceList>
+		<trackList :tracks='[ { url: "xxx.vtt", kind: "subtitles", srclang: "de", label: "German" }, { url: "yyy.vtt", kind: "subtitles", srclang: "en", label: "English" } ]'></trackList>
+		<!--<loadingSpinner id="loader" classname="load" text="hi" size="50" color="#080" bgcolor="#888" speed="1s"></loadingSpinner>-->
 		<sortList :lists='{ "1": "Hello", "2": "Morning", "3": "Evening" }'></sortList>
 		<tooltips defaulttext="hi" tooltipstext="I am here" position="top"></tooltips>
 		<optionList :options='{ "1": "Eat", "2": "Sleep", "3": "Sport" }'></optionList>
 		<!--<scrollToTop></scrollToTop>-->
-		<scrollToElement timer="1000" element="#av"></scrollToElement>
+		<!--<scrollToElement timer="1000" element="#av"></scrollToElement>-->
 	</div>
 </template>
 
@@ -62,9 +62,13 @@ import symbols from '@/components/tags/symbols/symbols.vue';
 import IFrame from '@/components/tags/iframe/iframe.vue'; 
 import headline from '@/components/tags/headline/headline.vue'; 
 import bold from '@/components/tags/formatter/bold.vue'; 
-import days from '@/components/date-time/days.vue'; 
 import sortList from '@/components/lists/sort-list.vue'; 
 import loadingSpinner from '@/components/loading-spinner/loading-spinner.vue';
+import legalForm from '@/components/forms/legal-form.vue';
+import trackList from '@/components/assets/track-list.vue';
+import sourceList from '@/components/assets/source-list.vue';
+import fwIcon from '@/components/assets/icons/fw-icon.vue';
+import materialIcon from '@/components/assets/icons/material-icon.vue';
 
 @Component({
 	components: {
@@ -83,9 +87,13 @@ import loadingSpinner from '@/components/loading-spinner/loading-spinner.vue';
 		IFrame,
 		headline,
 		bold,
-		days,
 		sortList,
 		loadingSpinner,
+		legalForm,
+		trackList,
+		sourceList,
+		fwIcon,
+		materialIcon
 	},
 })
 export default class Home extends Vue {}

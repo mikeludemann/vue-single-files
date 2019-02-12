@@ -2,14 +2,14 @@
 	<div>{{ getPerson() }}</div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'person',
 		props: {
 			firstname: String,
 			secondname: String,
 			lastname: String
-    },
+    	},
 		mounted() {
 
 		},

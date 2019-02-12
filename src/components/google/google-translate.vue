@@ -2,7 +2,7 @@
 	<div id="google_translate_element"></div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'googleTranslate',
 		props: [],

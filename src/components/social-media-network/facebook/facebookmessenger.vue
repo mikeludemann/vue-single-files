@@ -8,7 +8,7 @@
 	</div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'facebookmessenger',
 		props: {
@@ -35,7 +35,7 @@
 
 				document.getElementsByTagName("head").item(0).appendChild(link);
 
-				var user: any = document.getElementById("username");
+				var user = document.getElementById("username");
 				user.setAttribute("href", "https://m.me/" + this.username);
 
 			}

@@ -2,7 +2,7 @@
 	<div :id="id"></div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'countdownTimer',
 		props: {
@@ -32,11 +32,11 @@
 			}
 		},
 		methods: {
-			insertExternalSource: function (element: string, date: string, time: string, expiredText: string) {
+			insertExternalSource: function (element, date, time, expiredText) {
 
 				'use strict';
 
-				var setCountdown: any;
+				var setCountdown;
 
 				if (time == null || time == "") {
 
@@ -73,7 +73,7 @@
 					if (minutes == 1) { minutesText = " minute " } else { minutesText = " minutes " }
 					if (seconds == 1) { secondsText = " second " } else { secondsText = " seconds " }
 
-					var elementExist: any = document.getElementById(element);
+					var elementExist = document.getElementById(element);
 
 					if (distance < 0) {
 

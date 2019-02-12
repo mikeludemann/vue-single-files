@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'pinterestBoard',
 		props: {
@@ -40,8 +40,8 @@
 		methods: {
         insertExternalSource: function () {
 
-            var js: any = document.createElement("script"),
-                pin: any = document.getElementById("pinterest");
+            var js = document.createElement("script"),
+                pin = document.getElementById("pinterest");
 
             js.setAttribute("async", "true");
             js.setAttribute("defer", "true");

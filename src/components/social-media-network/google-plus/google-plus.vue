@@ -2,7 +2,7 @@
 	<div class="g-post"></div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'googlePlus',
 		props: {
@@ -29,7 +29,7 @@
 
 				document.getElementsByTagName("head").item(0).appendChild(link);
 
-				var user: any = document.getElementsByClassName("g-post")[0];
+				var user = document.getElementsByClassName("g-post")[0];
 				user.setAttribute("data-href", "https://plus.google.com/" + this.google_plus_id + "/posts/" + this.postid);
 
 			}

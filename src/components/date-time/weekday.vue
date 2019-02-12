@@ -2,12 +2,12 @@
 	<div>{{ toString }}</div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	export default {
 		name: 'weekday',
 		props: {
-      text: String
-    },
+			text: String
+		},
 		mounted() {
 
 		},
