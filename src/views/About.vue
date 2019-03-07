@@ -1,6 +1,10 @@
 <template>
 	<div class="about">
 		<h1>This is an about page</h1>
+		<div id="myNav" class="sidenavigation">
+			<sidenavigation v-for="item in customList" v-bind:list="item" v-bind:key="item.id">
+			</sidenavigation>
+		</div>
 		<button type="button" class="btn" @click="showModal">
 			Open Modal!
 		</button>
@@ -19,6 +23,7 @@
 	import modal from '@/components/modal/modal.vue';
 	import modalImage from '@/components/modal-image/modal-image.vue';
 	import portfolio from '@/components/portfolio/portfolio.vue';
+	import sidenavigation from '@/components/sidenavigation/sidenavigation.vue';
 
 	export default {
 		name: 'about',
@@ -26,10 +31,16 @@
 			modal,
 			modalImage,
 			portfolio,
+			sidenavigation,
 		},
 		data () {
 			return {
 				isModalVisible: false,
+				customList: [
+					{ id: 1, text: 'Hello', url: '#' },
+					{ id: 2, text: 'Morning', url: '#' },
+					{ id: 3, text: 'Evening', url: '#' }
+				]
 			};
 		},
 		methods: {
