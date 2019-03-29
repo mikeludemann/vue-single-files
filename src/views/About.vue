@@ -5,6 +5,7 @@
 			<sidenavigation v-for="item in customList" v-bind:list="item" v-bind:key="item.id">
 			</sidenavigation>
 		</div>
+		<pagination id="elements" elements="['a','b','c','d','e','f']" options="pageSize: 3, showPrevious: false, showNext: false"></pagination>
 		<button type="button" class="btn" @click="showModal">
 			Open Modal!
 		</button>
@@ -24,6 +25,7 @@
 	import modalImage from '@/components/modal-image/modal-image.vue';
 	import portfolio from '@/components/portfolio/portfolio.vue';
 	import sidenavigation from '@/components/sidenavigation/sidenavigation.vue';
+	import pagination from '@/components/plugins/pagination.vue';
 
 	export default {
 		name: 'about',
@@ -32,6 +34,7 @@
 			modalImage,
 			portfolio,
 			sidenavigation,
+			pagination,
 		},
 		data () {
 			return {
