@@ -40,7 +40,7 @@
 		methods: {
 			insertExternalSource: function () {
 
-				var js:any = document.createElement("script"),
+				var js = document.createElement("script"),
 					pin = document.getElementById("pinterest");
 
 				js.setAttribute("async", "true");

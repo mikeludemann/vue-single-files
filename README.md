@@ -1,5 +1,10 @@
 # vue-single-files
 
+## Prerequisite
+```
+npm install -g serve
+```
+
 ## Project setup
 ```
 npm install
@@ -13,6 +18,11 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
+```
+
+#### After Building - Running Web App
+```
+serve -s dist
 ```
 
 ### Run your tests

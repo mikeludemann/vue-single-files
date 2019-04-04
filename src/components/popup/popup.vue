@@ -41,7 +41,7 @@
 
 				}
 
-				function togglePopup(i: number) {
+				function togglePopup(i) {
 
 					return function () {
 
